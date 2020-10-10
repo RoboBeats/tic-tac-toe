@@ -31,7 +31,13 @@ def print_board(board):
 
 def player_move(board):
     x = int(input())
+    if x == 3:
+        main()
+        return
     y = int(input())
+    if x == 3:
+        main()
+        return
     if board[x][y] != 0:
         print("please play on a empty square")
         player_move(board)
@@ -145,7 +151,7 @@ def possible_win(board, row, column, max_possible_win):
 #     return False
 
 def main():
-    print("The computer places 2, you place 1 and 0 means the place is empty")
+    print("Computer uses 2, you use 1 and 0 means empty. Enter 3 to reset")
     global_board = [[0, 0, 0], [0, 0, 0], [0, 0, 0]]
     print_board(global_board)
     squares_full = 0
